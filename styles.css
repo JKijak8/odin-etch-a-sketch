@@ -5,6 +5,8 @@
     flex-direction: column;
     justify-content: stretch;
     align-content: stretch;
+    margin: auto;
+    border: 3px solid black;
 }
 
 .grid-element {
