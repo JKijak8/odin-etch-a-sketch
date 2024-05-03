@@ -1,0 +1,20 @@
+#etch-a-sketch-container {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+.grid-element {
+    flex: 1 1 0;
+    background-color: blue;
+}
+
+.grid-line {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: stretch;
+    align-items: stretch;
+}
