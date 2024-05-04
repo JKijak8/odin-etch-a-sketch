@@ -7,11 +7,21 @@
     align-content: stretch;
     margin: auto;
     border: 3px solid black;
+    background-color: black;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .grid-element {
     flex: 1 1 0;
-    background-color: blue;
+    background-color: white;
 }
 
 .grid-line {
