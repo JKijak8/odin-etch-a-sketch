@@ -19,9 +19,7 @@ buttons.addEventListener("click", (event) => {
 
   switch (target.id) {
     case "resize":
-      currentSize = getSize();
-      deleteGrid();
-      createGrid(currentSize);
+      resize();
       break;
 
     case "reset":
@@ -91,13 +89,27 @@ function deleteGrid() {
 function getSize() {
   let size;
   do {
-    size = Number(
-      prompt(
-        "Please enter new etch-a-sketch size(number from 1 to 100).",
-        "16",
-      ),
+    size = prompt(
+      "Please enter new etch-a-sketch size(number from 1 to 100).",
+      "16",
     );
+
+    if (size === null) {
+      return null;
+    }
+
+    size = Number(size);
   } while (size > 100 || size < 1);
 
   return size;
+}
+
+function resize() {
+  const SIZE = getSize();
+
+  if (SIZE !== null) {
+    deleteGrid();
+    createGrid(SIZE);
+    currentSize = SIZE;
+  }
 }
